@@ -30,14 +30,10 @@ def check_sentence_spelling(sentence):
     :return:
     """
     words = sentence.split()
-
     words = [word.lower() for word in words]
-
     words = [re.sub(r'[^A-Za-z0-9]+', '', word) for word in words]
-
     for word in words:
         result = check_word_spelling(word)
-
     print(result)
 
 
